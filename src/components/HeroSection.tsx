@@ -16,51 +16,50 @@ const HeroSection = () => {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const imgY = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const imgScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-  const textY = useTransform(scrollYProgress, [0, 1], [0, -60]);
 
   return (
-    <section id="hero" ref={ref} className="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-24 pb-12 relative overflow-hidden">
+    <section id="hero" ref={ref} className="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-24 pb-12">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
         <div className="flex flex-col gap-1">
           <motion.span custom={0} variants={line} initial="hidden" animate="visible" className="section-label">
-            Full-Stack Developer
+            India
           </motion.span>
           <motion.span custom={1} variants={line} initial="hidden" animate="visible" className="section-label">
-            Web Applications • AI-assisted Features
+            Full-Stack Developer
           </motion.span>
         </div>
         <div className="flex flex-col gap-1 md:text-right">
           <motion.span custom={0} variants={line} initial="hidden" animate="visible" className="section-label">
-            n8n • APIs • LLM Integrations
+            Available for Projects
           </motion.span>
           <motion.span custom={1} variants={line} initial="hidden" animate="visible" className="section-label">
-            Based in India
+            B.Tech CSE — 2024-2028
           </motion.span>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-        <motion.div style={{ y: textY }} className="md:col-span-7 overflow-hidden">
-          {["FULL-STACK", "DEVELOPER", "BUILDING", "MODERN DIGITAL", "EXPERIENCES"].map((text, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+        <div className="md:col-span-8 overflow-hidden">
+          {["UDIT", "PRASAD"].map((text, i) => (
             <motion.h1
               key={text}
               custom={i + 2}
               variants={line}
               initial="hidden"
               animate="visible"
-              className="editorial-heading text-[clamp(2.5rem,8vw,8rem)] leading-[0.88]"
+              className="editorial-heading text-[clamp(4rem,15vw,14rem)] leading-[0.85]"
             >
               {text}
             </motion.h1>
           ))}
-        </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.8 }}
           style={{ y: imgY, scale: imgScale }}
-          className="md:col-span-5 overflow-hidden"
+          className="md:col-span-4 overflow-hidden"
         >
           <img
             src={portfolioPic}
@@ -88,8 +87,8 @@ const HeroSection = () => {
           transition={{ delay: 1.4, duration: 0.8 }}
           className="editorial-body max-w-lg"
         >
-          Integrating AI tools, automation workflows, and APIs to build smarter applications.
           I build impactful full-stack applications and love solving real-world problems with code.
+          Integrating AI tools, automation workflows, and APIs to build smarter applications.
         </motion.p>
       </div>
     </section>
