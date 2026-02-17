@@ -24,7 +24,7 @@ const ExperienceSection = () => (
   <section className="px-6 md:px-12 py-24">
     <SectionLabel
       left="© Experience エクスペリエンス"
-      center="(UP® — 05)"
+      center="(UP® — 06)"
       right="Digital Craft"
     />
 
