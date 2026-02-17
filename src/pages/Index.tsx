@@ -1,6 +1,7 @@
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import MarqueeStrip from "@/components/MarqueeStrip";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import CapabilitiesSection from "@/components/CapabilitiesSection";
@@ -15,12 +16,15 @@ const Index = () => (
     <CustomCursor />
     <Navbar />
     <HeroSection />
+    <MarqueeStrip text="FULL-STACK DEVELOPER" direction="left" />
     <AboutSection />
+    <MarqueeStrip text="FEATURED WORKS" direction="right" />
     <ProjectsSection />
     <CapabilitiesSection />
     <AISection />
     <ExperienceSection />
     <TechStackSection />
+    <MarqueeStrip text="LET'S BUILD TOGETHER" direction="left" />
     <ContactSection />
     <Footer />
   </div>

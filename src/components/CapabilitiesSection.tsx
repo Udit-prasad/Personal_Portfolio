@@ -8,7 +8,7 @@ const capabilities = [
   { number: "04", title: "AI Integrations & Chatbots", desc: "LLM-powered features, chatbot interfaces, and intelligent data processing." },
   { number: "05", title: "Workflow Automation", desc: "n8n workflows, API connections, webhooks, and automated data pipelines." },
   { number: "06", title: "Data Visualization", desc: "Interactive 2D/3D chart rendering with Chart.js and Three.js." },
-  { number: "07", title: "Interactive User Experiences", desc: "Component-based design systems with Tailwind CSS and modern tooling." },
+  { number: "07", title: "Interactive Experiences", desc: "Component-based design systems with Tailwind CSS and modern tooling." },
 ];
 
 const CapabilitiesSection = () => (
@@ -36,15 +36,15 @@ const CapabilitiesSection = () => (
       {capabilities.map((cap, i) => (
         <motion.div
           key={cap.number}
-          initial={{ opacity: 0, x: -30 }}
+          initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-30px" }}
-          transition={{ duration: 0.5, delay: i * 0.08 }}
-          className="capability-item flex flex-col md:flex-row md:items-center gap-4 md:gap-12"
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6, delay: i * 0.06 }}
+          className="capability-item group flex flex-col md:flex-row md:items-center gap-4 md:gap-12 hover:bg-secondary/30 transition-colors duration-500 px-4 -mx-4"
         >
-          <span className="section-label w-8">{cap.number}</span>
-          <h3 className="font-display text-lg md:text-2xl font-semibold text-foreground flex-1">{cap.title}</h3>
-          <p className="editorial-body max-w-sm">{cap.desc}</p>
+          <span className="section-label w-8 group-hover:text-foreground transition-colors duration-500">{cap.number}</span>
+          <h3 className="font-display text-lg md:text-2xl font-semibold text-foreground flex-1 group-hover:translate-x-2 transition-transform duration-500">{cap.title}</h3>
+          <p className="editorial-body max-w-sm opacity-60 group-hover:opacity-100 transition-opacity duration-500">{cap.desc}</p>
         </motion.div>
       ))}
     </div>

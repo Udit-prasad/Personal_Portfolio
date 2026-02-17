@@ -90,19 +90,19 @@
   }
 
   .project-row {
-    @apply py-8 border-b border-border transition-all duration-500;
+    @apply py-8 md:py-10 border-b border-border transition-all duration-700;
   }
 
   .project-row:hover {
-    @apply bg-secondary/50;
+    @apply bg-secondary/30 pl-4;
   }
 
   .capability-item {
-    @apply py-6 border-b border-border;
+    @apply py-6 md:py-8 border-b border-border;
   }
 
   .experience-item {
-    @apply py-5 border-b border-border;
+    @apply py-6 md:py-8 border-b border-border;
   }
 }
 
