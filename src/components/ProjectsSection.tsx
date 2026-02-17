@@ -6,7 +6,7 @@ const projects = [
     number: "01",
     title: "ExcelViz",
     category: "Data Visualization",
-    description: "An interactive Excel data visualization web app that supports both 2D and 3D chart rendering.",
+    description: "An interactive Excel data visualization web app with 2D and 3D chart rendering — AI-assisted data insights planned.",
     stack: "React.js, Redux Toolkit, Chart.js, Three.js, Tailwind CSS",
     year: "2025",
   },
@@ -21,9 +21,17 @@ const projects = [
   {
     number: "03",
     title: "Atmoscan",
-    category: "Weather Application",
-    description: "A real-time weather data application that visualizes environmental metrics for any location.",
-    stack: "React.js, Node.js, Express.js, OpenWeatherMap API",
+    category: "Weather + AI Insights",
+    description: "Real-time weather data application with AI-generated environmental insights for any location.",
+    stack: "React.js, Node.js, Express.js, OpenWeatherMap API, LLM API",
+    year: "2025",
+  },
+  {
+    number: "04",
+    title: "Automation Workflows",
+    category: "n8n + APIs",
+    description: "Workflow automation demos connecting APIs, webhooks, and LLM-powered processing pipelines.",
+    stack: "n8n, REST APIs, Webhooks, Node.js",
     year: "2025",
   },
 ];
@@ -52,7 +60,7 @@ const ProjectsSection = () => (
           key={project.number}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: i * 0.1 }}
           className="project-row group"
           data-hover

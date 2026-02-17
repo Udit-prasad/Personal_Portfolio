@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import SectionLabel from "./SectionLabel";
 
 const capabilities = [
-  { number: "01", title: "Full-Stack Development", desc: "End-to-end web applications using MERN stack with scalable architecture." },
+  { number: "01", title: "Full-Stack Web Development", desc: "End-to-end web applications using MERN stack with scalable architecture." },
   { number: "02", title: "Frontend Engineering", desc: "React.js interfaces with state management, responsive design, and performance." },
-  { number: "03", title: "Backend Architecture", desc: "Node.js & Express APIs with MongoDB, authentication, and RESTful design." },
-  { number: "04", title: "Data Visualization", desc: "Interactive 2D/3D chart rendering with Chart.js and Three.js." },
-  { number: "05", title: "UI Systems", desc: "Component-based design systems with Tailwind CSS and modern tooling." },
-  { number: "06", title: "Problem Solving", desc: "DSA in C, OOP in Java — strong algorithmic and computational thinking." },
+  { number: "03", title: "Backend APIs & Logic", desc: "Node.js & Express APIs with MongoDB, authentication, and RESTful design." },
+  { number: "04", title: "AI Integrations & Chatbots", desc: "LLM-powered features, chatbot interfaces, and intelligent data processing." },
+  { number: "05", title: "Workflow Automation", desc: "n8n workflows, API connections, webhooks, and automated data pipelines." },
+  { number: "06", title: "Data Visualization", desc: "Interactive 2D/3D chart rendering with Chart.js and Three.js." },
+  { number: "07", title: "Interactive User Experiences", desc: "Component-based design systems with Tailwind CSS and modern tooling." },
 ];
 
 const CapabilitiesSection = () => (
@@ -35,9 +36,9 @@ const CapabilitiesSection = () => (
       {capabilities.map((cap, i) => (
         <motion.div
           key={cap.number}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-30px" }}
           transition={{ duration: 0.5, delay: i * 0.08 }}
           className="capability-item flex flex-col md:flex-row md:items-center gap-4 md:gap-12"
         >

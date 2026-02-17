@@ -14,12 +14,12 @@ const ContactSection = () => (
   <section id="contact" className="px-6 md:px-12 py-24">
     <SectionLabel
       left="© Get In Touch お問い合わせ"
-      center="(UP® — 06)"
+      center="(UP® — 08)"
       right="Open for Work"
     />
 
     <div className="overflow-hidden mb-16">
-      {["LET'S", "BUILD", "SOMETHING", "TOGETHER."].map((text, i) => (
+      {["LET'S BUILD", "SMARTER", "DIGITAL", "EXPERIENCES."].map((text, i) => (
         <motion.h2
           key={text}
           custom={i}
