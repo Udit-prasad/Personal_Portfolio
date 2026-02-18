@@ -21,11 +21,10 @@ const Index = () => (
     <AboutSection />
     <MarqueeStrip text="FEATURED WORKS" direction="right" inverted />
     <ProjectsSection />
-    <CapabilitiesSection />
-    <AISection />
     <ExperienceSection />
     <TechStackSection />
-    <MarqueeStrip text="AI AUTOMATION WORKFLOWS" direction="left" inverted />
+    <CapabilitiesSection />
+    <AISection />
     <ContactSection />
     <Footer />
   </div>
