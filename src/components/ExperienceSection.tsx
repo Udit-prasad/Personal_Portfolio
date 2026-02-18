@@ -3,7 +3,7 @@ import SectionLabel from "./SectionLabel";
 
 const experiences = [
   {
-    period: "June 2025 — Present",
+    period: "June 2025 — Sept 2025",
     role: "Full Stack Development Intern",
     company: "Zidio Development",
     details: [
