@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Instagram, Linkedin } from "lucide-react";
 import SectionLabel from "./SectionLabel";
 
 const line = {
@@ -54,13 +55,27 @@ const ContactSection = () => (
       <div className="flex flex-col gap-4">
         <span className="section-label">LinkedIn</span>
         <a
-          href="https://linkedin.com/in/udit-prasad-805bb8319"
+          href="https://www.linkedin.com/in/udit-prasad-805bb8319/"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-display text-lg text-foreground hover:text-muted-foreground transition-colors"
+          className="font-display text-lg text-foreground hover:text-muted-foreground transition-colors flex items-center gap-2"
           data-hover
         >
+          <Linkedin size={20} />
           Udit Prasad
+        </a>
+      </div>
+      <div className="flex flex-col gap-4">
+        <span className="section-label">Instagram</span>
+        <a
+          href="https://www.instagram.com/_.its.uditt._/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-display text-lg text-foreground hover:text-muted-foreground transition-colors flex items-center gap-2"
+          data-hover
+        >
+          <Instagram size={20} />
+          @_.its.uditt._
         </a>
       </div>
       <div className="flex flex-col gap-4">
