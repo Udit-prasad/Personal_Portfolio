@@ -2,7 +2,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import SectionLabel from "./SectionLabel";
 import portfolioPic from "@/assets/portfolio-pic.jpeg";
-import uditImg from "@/assets/udit.jpg";
 
 const AboutSection = () => {
   const ref = useRef<HTMLElement>(null);
@@ -35,20 +34,6 @@ const AboutSection = () => {
               alt="Udit Prasad"
               style={{ scale: img1Scale }}
               className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="overflow-hidden"
-          >
-            <motion.img
-              src={uditImg}
-              alt="Udit Prasad working"
-              style={{ scale: img2Scale }}
-              className="w-full aspect-[16/10] object-cover grayscale hover:grayscale-0 transition-all duration-700"
             />
           </motion.div>
         </div>

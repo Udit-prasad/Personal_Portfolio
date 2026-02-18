@@ -4,9 +4,10 @@ import { useRef } from "react";
 interface MarqueeStripProps {
   text: string;
   direction?: "left" | "right";
+  inverted?: boolean;
 }
 
-const MarqueeStrip = ({ text, direction = "left" }: MarqueeStripProps) => {
+const MarqueeStrip = ({ text, direction = "left", inverted = false }: MarqueeStripProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const x = useTransform(
@@ -18,9 +19,20 @@ const MarqueeStrip = ({ text, direction = "left" }: MarqueeStripProps) => {
   const repeated = Array(8).fill(text).join(" — ");
 
   return (
-    <div ref={ref} className="overflow-hidden py-6 md:py-10 border-y border-border">
+    <div
+      ref={ref}
+      className={`overflow-hidden py-6 md:py-10 border-y ${
+        inverted
+          ? "bg-foreground border-foreground"
+          : "border-border"
+      }`}
+    >
       <motion.div style={{ x }} className="whitespace-nowrap">
-        <span className="font-display text-[clamp(2rem,6vw,6rem)] font-bold text-foreground/10 uppercase tracking-tight">
+        <span
+          className={`font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase tracking-tight ${
+            inverted ? "text-background" : "text-foreground/10"
+          }`}
+        >
           {repeated}
         </span>
       </motion.div>
