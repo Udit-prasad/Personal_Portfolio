@@ -16,15 +16,16 @@ const Index = () => (
     <CustomCursor />
     <Navbar />
     <HeroSection />
-    <MarqueeStrip text="FULL-STACK DEVELOPER" direction="left" />
+    <MarqueeStrip text="FULL-STACK DEVELOPER" direction="left" inverted />
+    <MarqueeStrip text="AI ENTHUSIAST" direction="right" inverted />
     <AboutSection />
-    <MarqueeStrip text="FEATURED WORKS" direction="right" />
+    <MarqueeStrip text="FEATURED WORKS" direction="right" inverted />
     <ProjectsSection />
     <CapabilitiesSection />
     <AISection />
     <ExperienceSection />
     <TechStackSection />
-    <MarqueeStrip text="LET'S BUILD TOGETHER" direction="left" />
+    <MarqueeStrip text="AI AUTOMATION WORKFLOWS" direction="left" inverted />
     <ContactSection />
     <Footer />
   </div>
