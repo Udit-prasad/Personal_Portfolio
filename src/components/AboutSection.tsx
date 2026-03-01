@@ -84,7 +84,7 @@ const AboutSection = () => {
             {[
               { label: "Projects", value: "04+" },
               { label: "Tech Stack", value: "12+" },
-              { label: "Focus", value: "Full-Stack" },
+              { label: "Focus", value: "AI" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
