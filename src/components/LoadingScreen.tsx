@@ -29,7 +29,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
               transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
               className="flex flex-col items-center gap-3"
             >
-              <span className="font-display text-[clamp(2rem,6vw,5rem)] font-bold text-background tracking-tight leading-none">
+              <span className="font-display text-[clamp(3rem,10vw,8rem)] font-bold text-background tracking-tight leading-none">
                 {name.split("").map((char, i) => (
                   <motion.span
                     key={i}
