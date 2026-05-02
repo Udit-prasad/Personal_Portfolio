@@ -3,7 +3,7 @@
 A sleek, editorial-style personal portfolio built to showcase my projects, skills, and experience as a Full-Stack Developer and AI Enthusiast. The design is inspired by modern digital magazines, featuring smooth animations, elegant typography, and a monochromatic aesthetic.
 
 ## 🚀 Live Demo
-*(Add your live URL here once deployed, e.g., Vercel or Netlify)*
+[https://personal-portfolio-ecru-mu-68.vercel.app/](https://personal-portfolio-ecru-mu-68.vercel.app/)
 
 ## ✨ Features
 - **Editorial Design System**: Custom typography using Syne and Space Grotesk.
