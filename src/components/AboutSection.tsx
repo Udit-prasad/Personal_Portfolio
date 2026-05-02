@@ -59,7 +59,7 @@ const AboutSection = () => {
 
         <div className="flex flex-wrap justify-center gap-16 md:gap-32 mt-12">
           {[
-            { label: "Projects", value: "04+" },
+            { label: "Projects", value: "10+" },
             { label: "Tech Stack", value: "12+" },
             { label: "Focus", value: "Artificial Intelligence" },
           ].map((stat, i) => (
