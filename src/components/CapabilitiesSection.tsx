@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import SectionLabel from "./SectionLabel";
 
 const capabilities = [
-  { number: "01", title: "Full-Stack Web Development", desc: "End-to-end web applications using MERN stack with scalable architecture." },
+  { number: "01", title: "AI & Agent Development", desc: "Passionate AI enthusiast leveraging AI tools and models efficiently for advanced development and intelligent agent building." },
   { number: "02", title: "Frontend Engineering", desc: "React.js interfaces with state management, responsive design, and performance." },
   { number: "03", title: "Backend APIs & Logic", desc: "Node.js & Express APIs with MongoDB, authentication, and RESTful design." },
   { number: "04", title: "AI Integrations & Chatbots", desc: "LLM-powered features, chatbot interfaces, and intelligent data processing." },

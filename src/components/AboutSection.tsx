@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import SectionLabel from "./SectionLabel";
-import portfolioPic from "@/assets/portfolio-pic.jpeg";
+import portfolioPic from "@/assets/portfolio-pic.jpg";
 
 const AboutSection = () => {
   const ref = useRef<HTMLElement>(null);
@@ -84,7 +84,7 @@ const AboutSection = () => {
             {[
               { label: "Projects", value: "04+" },
               { label: "Tech Stack", value: "12+" },
-              { label: "Focus", value: "AI" },
+              { label: "Focus", value: "Artificial Intelligence" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}

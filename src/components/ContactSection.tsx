@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, Github } from "lucide-react";
 import SectionLabel from "./SectionLabel";
 
 const line = {
@@ -79,6 +79,19 @@ const ContactSection = () => (
         </a>
       </div>
       <div className="flex flex-col gap-4">
+        <span className="section-label">GitHub</span>
+        <a
+          href="https://github.com/Udit-prasad"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-display text-lg text-foreground hover:text-muted-foreground transition-colors flex items-center gap-2"
+          data-hover
+        >
+          <Github size={20} />
+          Udit-prasad
+        </a>
+      </div>
+      <div className="flex flex-col gap-4">
         <span className="section-label">Resume</span>
         <a
           href="https://drive.google.com/file/d/1csOrZjXy1cNGwx-N3nnWaqZbxDcT6P2O/view?usp=drivesdk"
@@ -89,6 +102,72 @@ const ContactSection = () => (
         >
           Download CV
         </a>
+      </div>
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.7, duration: 0.7 }}
+      className="mt-24 grid grid-cols-1 lg:grid-cols-3 gap-8"
+    >
+      <div className="lg:col-span-2 bg-secondary/10 border border-border rounded-2xl p-8 md:p-12">
+        <form className="flex flex-col gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-col gap-3">
+              <label htmlFor="name" className="section-label">Name</label>
+              <input type="text" id="name" className="bg-transparent border border-border rounded-xl px-4 py-3 outline-none focus:border-foreground transition-colors font-display text-base" />
+            </div>
+            <div className="flex flex-col gap-3">
+              <label htmlFor="phone" className="section-label">Phone / WhatsApp</label>
+              <input type="text" id="phone" className="bg-transparent border border-border rounded-xl px-4 py-3 outline-none focus:border-foreground transition-colors font-display text-base" />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-col gap-3">
+              <label htmlFor="email" className="section-label">Email</label>
+              <input type="email" id="email" className="bg-transparent border border-border rounded-xl px-4 py-3 outline-none focus:border-foreground transition-colors font-display text-base" />
+            </div>
+            <div className="flex flex-col gap-3">
+              <label htmlFor="subject" className="section-label">Subject</label>
+              <input type="text" id="subject" className="bg-transparent border border-border rounded-xl px-4 py-3 outline-none focus:border-foreground transition-colors font-display text-base" />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <label htmlFor="message" className="section-label">Message</label>
+            <textarea id="message" rows={4} className="bg-transparent border border-border rounded-xl px-4 py-3 outline-none focus:border-foreground transition-colors font-display text-base resize-none placeholder:text-muted-foreground/50" placeholder="Tell me about your project..."></textarea>
+          </div>
+
+          <button type="submit" className="mt-4 px-8 py-4 bg-foreground text-background font-display font-medium rounded-full hover:opacity-80 transition-opacity w-fit">
+            Submit Inquiry
+          </button>
+        </form>
+      </div>
+
+      <div className="bg-transparent border border-border rounded-2xl p-8 md:p-12 flex flex-col">
+        <h3 className="editorial-heading text-3xl md:text-4xl mb-4 text-foreground">Prefer WhatsApp?</h3>
+        <p className="editorial-body text-muted-foreground mb-12">
+          Message me directly and say: "I want to build something amazing with you."
+        </p>
+        
+        <div className="mt-auto">
+          <a 
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 border border-foreground text-foreground font-display font-medium rounded-full hover:bg-foreground hover:text-background transition-colors w-fit text-center mb-12"
+          >
+            Chat On WhatsApp
+          </a>
+          
+          <p className="font-display font-semibold text-lg text-foreground mb-2">Best for</p>
+          <p className="editorial-body text-sm text-muted-foreground">
+            Startups, founders, local businesses, and fast-paced development projects.
+          </p>
+        </div>
       </div>
     </motion.div>
   </section>
