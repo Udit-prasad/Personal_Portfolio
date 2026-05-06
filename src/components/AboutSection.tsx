@@ -83,7 +83,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="section-label hover:text-foreground transition-colors w-fit border-b border-border pb-1 mt-8"
+          className="liquid-glass-button mt-8"
         >
           SEE WORKS →
         </motion.a>

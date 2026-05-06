@@ -141,7 +141,7 @@ const ContactSection = () => (
             <textarea id="message" rows={4} className="bg-transparent border border-border rounded-xl px-4 py-3 outline-none focus:border-foreground transition-colors font-display text-base resize-none placeholder:text-muted-foreground/50" placeholder="Tell me about your project..."></textarea>
           </div>
 
-          <button type="submit" className="mt-4 px-8 py-4 bg-foreground text-background font-display font-medium rounded-full hover:opacity-80 transition-opacity w-fit">
+          <button type="submit" className="liquid-glass-button mt-4">
             Submit Inquiry
           </button>
         </form>
@@ -158,7 +158,7 @@ const ContactSection = () => (
             href="https://wa.me/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 border border-foreground text-foreground font-display font-medium rounded-full hover:bg-foreground hover:text-background transition-colors w-fit text-center mb-12"
+            className="liquid-glass-button mb-12"
           >
             Chat On WhatsApp
           </a>

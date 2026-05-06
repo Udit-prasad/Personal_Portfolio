@@ -1,5 +1,5 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import SectionLabel from "./SectionLabel";
 
 const projects = [
@@ -10,6 +10,8 @@ const projects = [
     description: "An interactive Excel data visualization web app with 2D and 3D chart rendering — AI-assisted data insights planned.",
     stack: "React.js, Redux Toolkit, Chart.js, Three.js, Tailwind CSS",
     year: "2025",
+    // Placeholder image - replace with actual screenshot
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
   },
   {
     number: "02",
@@ -18,6 +20,8 @@ const projects = [
     description: "A full-stack blogging platform with user authentication, post management, and rich text editing.",
     stack: "React.js, Node.js, Express.js, MongoDB, Redux Toolkit",
     year: "2025",
+    // Placeholder image - replace with actual screenshot
+    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1000&auto=format&fit=crop",
   },
   {
     number: "03",
@@ -26,6 +30,8 @@ const projects = [
     description: "Real-time weather data application with AI-generated environmental insights for any location.",
     stack: "React.js, Node.js, Express.js, OpenWeatherMap API, LLM API",
     year: "2025",
+    // Placeholder image - replace with actual screenshot
+    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1000&auto=format&fit=crop",
   },
   {
     number: "04",
@@ -34,6 +40,8 @@ const projects = [
     description: "Workflow automation demos connecting APIs, webhooks, and LLM-powered processing pipelines.",
     stack: "n8n, REST APIs, Webhooks, Node.js",
     year: "2025",
+    // Placeholder image - replace with actual screenshot
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop",
   },
 ];
 
@@ -42,8 +50,25 @@ const ProjectsSection = () => {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const headingX = useTransform(scrollYProgress, [0, 0.3], [-60, 0]);
 
+  // Hover state and mouse tracking
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springX = useSpring(mouseX, { stiffness: 150, damping: 15, mass: 0.1 });
+  const springY = useSpring(mouseY, { stiffness: 150, damping: 15, mass: 0.1 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
+
   return (
-    <section id="projects" ref={ref} className="px-6 md:px-12 py-24">
+    <section id="projects" ref={ref} className="px-6 md:px-12 py-24 relative">
       <SectionLabel
         left="© Featured Projects プロジェクト"
         center="(UP® — 03)"
@@ -65,11 +90,13 @@ const ProjectsSection = () => {
         {projects.map((project, i) => (
           <motion.div
             key={project.number}
+            onMouseEnter={() => setHoveredProject(project.number)}
+            onMouseLeave={() => setHoveredProject(null)}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, delay: i * 0.08 }}
-            className="project-row group"
+            className="project-row group relative cursor-none"
             data-hover
           >
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -96,6 +123,26 @@ const ProjectsSection = () => {
           </motion.div>
         ))}
       </div>
+
+      <AnimatePresence>
+        {hoveredProject && (
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+            src={projects.find(p => p.number === hoveredProject)?.image}
+            alt="Project Preview"
+            className="fixed pointer-events-none z-50 w-64 md:w-96 aspect-video object-cover rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 hidden md:block"
+            style={{
+              left: springX,
+              top: springY,
+              x: "-50%",
+              y: "-50%",
+            }}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };
