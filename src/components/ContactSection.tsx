@@ -94,7 +94,7 @@ const ContactSection = () => (
       <div className="flex flex-col gap-4">
         <span className="section-label">Resume</span>
         <a
-          href="https://drive.google.com/file/d/1csOrZjXy1cNGwx-N3nnWaqZbxDcT6P2O/view?usp=drivesdk"
+          href="/Udit_Prasad_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="font-display text-lg text-foreground hover:text-muted-foreground transition-colors"

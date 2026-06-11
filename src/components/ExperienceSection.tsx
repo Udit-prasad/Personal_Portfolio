@@ -13,6 +13,17 @@ const experiences = [
     ],
   },
   {
+    period: "Jan 2025 — Jun 2026",
+    role: "AI Agent Developer & Full-Stack Intern (Sister Startups, Same Founders)",
+    company: "BrandIQ & LoopLab",
+    details: [
+      "Built AI-powered agents and chatbots using LLMs (GPT, Groq, Claude) to automate client workflows and business operations end-to-end",
+      "Designed MCP (Model Context Protocol) integrations connecting AI agents to external tools, APIs, and data sources for autonomous agentic task execution",
+      "Developed multi-step automation pipelines using N8N and Zapier with AI decision nodes, eliminating manual overhead across multiple client businesses",
+      "Researched and rapidly prototyped emerging AI tools and frameworks; delivered websites and full-stack applications for clients using AI-assisted development",
+    ],
+  },
+  {
     period: "2024 — 2028",
     role: "B.Tech Computer Science & Engineering",
     company: "Sister Nivedita University",
